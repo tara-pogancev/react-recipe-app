@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe';
 import './App.css';
 
@@ -24,7 +24,7 @@ const App = () => {
   };
 
   const updateSearch = e => {
-    setSearch(e.target.value);    
+    setSearch(e.target.value);
     console.log(search);
   }
 
@@ -35,26 +35,27 @@ const App = () => {
     element.value = "";
   }
 
-  return(
+  return (
 
     <div className="App">
-      <h1 class="Title">Let's search for recipes!</h1>
-      <form className="search-form" onSubmit={getSearch}>
-        <input id="input-form" type="text" className="SearchBar" onChange={updateSearch} placeholder="Search..."></input>
+      <h1 class="title">Let's search for recipes!</h1>
+
+      <form onSubmit={getSearch}>
+        <input id="input-form" type="text" className="search-input" onChange={updateSearch} placeholder="Search..."></input>
         <button type="submit" className="search-button">
-          GO
+          <p>GO</p>
         </button>
       </form>
 
       {recipes.map(recipe => (
-        <Recipe 
-          key={recipe.recipe.url} 
-          title={recipe.recipe.label} 
+        <Recipe
+          key={recipe.recipe.url}
+          title={recipe.recipe.label}
           dishType={recipe.recipe.dishType}
-          calories={recipe.recipe.calories} 
+          calories={recipe.recipe.calories}
           url={recipe.recipe.url}
-          image={recipe.recipe.image}/>
-      ))};
+          image={recipe.recipe.image} />
+      ))}
 
     </div>
   );
