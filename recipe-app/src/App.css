@@ -22,4 +22,9 @@
 	outline: none;
   background: transparent;
 
+  &:focus + span {
+    opacity: 1;
+		transform: scale(1);
+  }
+
 }
