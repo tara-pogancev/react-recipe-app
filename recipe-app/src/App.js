@@ -25,7 +25,6 @@ const App = () => {
 
   const updateSearch = e => {
     setSearch(e.target.value);
-    console.log(search);
   }
 
   const getSearch = e => {
@@ -47,6 +46,9 @@ const App = () => {
         </button>
       </form>
 
+      <div className="v-gap"></div>
+
+      <div className="recipes">
       {recipes.map(recipe => (
         <Recipe
           key={recipe.recipe.url}
@@ -56,6 +58,8 @@ const App = () => {
           url={recipe.recipe.url}
           image={recipe.recipe.image} />
       ))}
+      </div>
+      
 
     </div>
   );

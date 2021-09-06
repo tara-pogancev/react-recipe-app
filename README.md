@@ -17,4 +17,4 @@ A simple React appliaction that uses Edamam API to fetch recipes from the web. U
 
 
 ## Screenshots
-...
+![recipes](images/img1.jpg)
